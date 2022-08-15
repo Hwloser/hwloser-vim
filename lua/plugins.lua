@@ -48,6 +48,9 @@ return require('packer').startup(function(use)
     run = ':TSUpdate'
   }
 
+  use 'jose-elias-alvarez/null-ls.nvim' -- Use Neovim as a language server to inject LSP diagnostics, code actions, and more vai LUA
+  use 'MunifTanjim/prettier.nvim' -- Prettier pluigin for Neovim`s built-in LSP client
+
   use 'windwp/nvim-autopairs'
   use 'windwp/nvim-ts-autotag'
 
@@ -57,4 +60,6 @@ return require('packer').startup(function(use)
 
   use 'akinsho/nvim-bufferline.lua'
   use 'norcalli/nvim-colorizer.lua'
+
+  use 'lewis6991/gitsigns.nvim'
 end)
