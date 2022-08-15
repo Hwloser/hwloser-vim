@@ -16,3 +16,8 @@ url: <https://github.com/kyazdani42/nvim-tree.lua>
 - `:NvimTreeFocus`: Open the tree if it is closed, and then focus on the tree.
 - `:NvimTreeFindFile`: Move the cursor in the tree for then current buffer, opening folders if needed.
 
+## gitsign
+
+Super fast git decorations implemented purely in lua/teal.
+
+
