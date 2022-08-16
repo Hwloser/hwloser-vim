@@ -9,12 +9,23 @@ local init_packer = function()
   end
 end
 
+---Config autoupdate packer when current file is update
+local auto_update = function autoupdate()
+  vim.cmd([[
+    augroup packer_user_config
+      autocmd!
+      autocmd BufWritePost plugins.lua source <afile> | PackerCompile
+    augroup end
+  ]])
+end
+
 local status, packer = pcall(require, 'packer')
 if not status then
   print("Packer is not installed")
   print("initialize packer firstly")
 
   init_packer()
+  auto_update()
 
   print("install success, please enter arbitary key for next step")
 end
