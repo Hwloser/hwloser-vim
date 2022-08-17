@@ -60,6 +60,6 @@ vim.cmd([[
 ]])
 nvim_lsp.ltex.setup {
   cmd = { "ltex-ls" },
-  filetypes = { "bin", "gitcommit", "markdown", "org", "plaintex", "rst", "rnoweb", "tex" },
-  single_file_support = true
+  filetypes = { "bib", "gitcommit", "markdown", "org", "plaintex", "rst", "rnoweb", "tex" },
+  single_file_support = true,
 }
