@@ -52,3 +52,14 @@ nvim_lsp.solargraph.setup {
     }
   }
 }
+
+-- markdown lsp
+-- 1. support .org files
+vim.cmd([[
+  autocmd BufRead,BufNewFile *.org set filetype=org
+]])
+nvim_lsp.ltex.setup {
+  cmd = { "ltex-ls" },
+  filetypes = { "bin", "gitcommit", "markdown", "org", "plaintex", "rst", "rnoweb", "tex" },
+  single_file_support = true
+}
