@@ -13,6 +13,9 @@ keymap.set('n', 'dw', 'vb"_d')
 -- Select all
 keymap.set('n', '<C-a>', 'gg<S-v>G')
 
+-- Save file
+keymap.set('n', '<C-s>', ':wa<CR>', { silent = true })
+
 -- New tab
 keymap.set('n', 'te', ':tabe<CR>', { silent = true })
 -- Split window

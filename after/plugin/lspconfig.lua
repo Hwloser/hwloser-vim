@@ -38,3 +38,17 @@ nvim_lsp.sumneko_lua.setup {
     }
   }
 }
+
+-- ruby lsp
+nvim_lsp.solargraph.setup {
+  cmd = { "solargraph", "stdio" },
+  filetypes = { "ruby" },
+  init_options = {
+    formatting = true
+  },
+  settings = {
+    solargraph = {
+      diagnostics = true
+    }
+  }
+}

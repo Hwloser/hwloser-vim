@@ -10,7 +10,7 @@ local init_packer = function()
 end
 
 ---Config autoupdate packer when current file is update
-local auto_update = function autoupdate()
+local auto_update = function()
   vim.cmd([[
     augroup packer_user_config
       autocmd!

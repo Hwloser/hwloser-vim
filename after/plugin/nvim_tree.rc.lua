@@ -19,4 +19,12 @@ tree.setup({
   },
 })
 
-vim.keymap.set('n', '<space>e', ':NvimTreeToggle<CR>', { silent = true })
+vim.keymap.set('n', '<space>e', ':NvimTreeFindFileToggle<CR>', { silent = true })
+
+--it' a pain to use
+-- autocmd! * <buffer>
+-- vim.cmd([[
+--   augroup nvim_tree_auto_open
+--     autocmd VimEnter *.lua :NvimTreeOpen
+--   augroup END
+-- ]])
