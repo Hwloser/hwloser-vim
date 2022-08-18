@@ -90,4 +90,6 @@ return require('packer').startup(function(use)
       vim.fn["mkdp#util#install"]()
     end
   }
+
+  use 'mfussenegger/nvim-jdtls'
 end)
