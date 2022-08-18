@@ -41,19 +41,28 @@ telescope.setup {
 
 telescope.load_extension('file_browser')
 
+local kms = vim.keymap.set
 local opts = { noremap = true, silent = true }
-vim.keymap.set('n', ';f', '<cmd>lua require("telescope.builtin").find_files( { no_ignore = false, hidden = true } )<CR>'
-  , opts)
-vim.keymap.set('n', ';r', '<cmd>lua require("telescope.builtin").live_grep()<CR>'
-  , opts)
-vim.keymap.set('n', '\\\\', '<cmd>lua require("telescope.builtin").buffers()<CR>'
-  , opts)
-vim.keymap.set('n', ';t', '<cmd>lua require("telescope.builtin").help_tags()<CR>'
-  , opts)
-vim.keymap.set('n', ';;', '<cmd>lua require("telescope.builtin").resume()<CR>'
-  , opts)
-vim.keymap.set('n', ';e', '<cmd>lua require("telescope.builtin").diagnostic()<CR>'
-  , opts)
-vim.keymap.set('n', 'sf',
-  '<cmd>lua require("telescope").extensions.file_browser.file_browser({ path = "%:p:h", cwd = telescope_buffer_dir(), respect_git_ignore = false, hidden = true, grouped = true, previewer = false, initial_mode = "normal", layout_config = { height = 40 }})<CR>'
-  , opts)
+-- Find files using Telescope command-line sugar
+kms('n', '<leader>ff', '<cmd>Telescope find_files<CR>', opts)
+kms('n', '<leader>fg', '<cmd>Telescope live_grep<CR>', opts)
+kms('n', '<leader>fb', '<cmd>Telescope buffers<CR>', opts)
+kms('n', '<leader>fh', '<cmd>Telescope help_tags<CR>', opts)
+kms('n', '<leader>fd', '<cmd>Telescope diagnostics<CR>', opts)
+
+-- Using lua functions
+-- kms('n', ';f', '<cmd>lua require("telescope.builtin").find_files( { no_ignore = false, hidden = true } )<CR>'
+--   , opts)
+-- kms('n', ';r', '<cmd>lua require("telescope.builtin").live_grep()<CR>'
+--   , opts)
+-- kms('n', '\\\\', '<cmd>lua require("telescope.builtin").buffers()<CR>'
+--   , opts)
+-- kms('n', ';t', '<cmd>lua require("telescope.builtin").help_tags()<CR>'
+--   , opts)
+-- kms('n', ';;', '<cmd>lua require("telescope.builtin").resume()<CR>'
+--   , opts)
+-- kms('n', ';e', '<cmd>lua require("telescope.builtin").diagnostic()<CR>'
+--   , opts)
+-- kms('n', 'sf',
+--   '<cmd>lua require("telescope").extensions.file_browser.file_browser({ path = "%:p:h", cwd = telescope_buffer_dir(), respect_git_ignore = false, hidden = true, grouped = true, previewer = false, initial_mode = "normal", layout_config = { height = 40 }})<CR>'
+--   , opts)

@@ -61,7 +61,9 @@ tree.setup({
   },
 })
 
-vim.keymap.set('n', '<space>e', ':NvimTreeFindFileToggle<CR>', { silent = true })
+local kms = vim.keymap.set
+kms('n', '<leader>e', ':NvimTreeFindFileToggle<CR>', { silent = true })
+
 
 -- auto close, when the last window is NvimTree
 -- vim.api.nvim_create_autocmd("BufEnter", {
