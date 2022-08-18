@@ -8,6 +8,9 @@ end
 
 local fb_actions = require 'telescope'.extensions.file_browser.actions
 
+telescope.load_extension('file_browser')
+telescope.load_extension('media_files')
+
 telescope.setup {
   defaults = {
     mappings = {
@@ -35,11 +38,16 @@ telescope.setup {
           end
         }
       }
+    },
+    media_files = {
+      -- filetypes whitelist
+      -- defaults to {"png", "jpg", "mp4", "webm", "pdf"}
+      filetypes = { "png", "webp", "jpg", "jpeg" },
+      find_cmd = "rg" -- find command (defaults to `fd`)
     }
   }
 }
 
-telescope.load_extension('file_browser')
 
 local kms = vim.keymap.set
 local opts = { noremap = true, silent = true }
@@ -49,6 +57,8 @@ kms('n', '<leader>fg', '<cmd>Telescope live_grep<CR>', opts)
 kms('n', '<leader>fb', '<cmd>Telescope buffers<CR>', opts)
 kms('n', '<leader>fh', '<cmd>Telescope help_tags<CR>', opts)
 kms('n', '<leader>fd', '<cmd>Telescope diagnostics<CR>', opts)
+kms('n', '<leader>ft', '<cmd>Telescope<CR>', opts)
+
 
 -- Using lua functions
 -- kms('n', ';f', '<cmd>lua require("telescope.builtin").find_files( { no_ignore = false, hidden = true } )<CR>'

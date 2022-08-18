@@ -46,7 +46,7 @@ return require('packer').startup(function(use)
   use 'L3MON4D3/LuaSnip' -- Snippet
   use 'hoob3rt/lualine.nvim' -- Statusline
 
-  use 'glepnir/lspsaga.nvim' -- LSP UIS
+  -- use 'glepnir/lspsaga.nvim' -- LSP UIS
   use 'neovim/nvim-lspconfig' -- LSP config
 
   use 'onsails/lspkind-nvim' -- vscode-like pictograms
@@ -65,9 +65,11 @@ return require('packer').startup(function(use)
   use 'windwp/nvim-autopairs'
   use 'windwp/nvim-ts-autotag'
 
+  use 'nvim-lua/popup.nvim' -- for telescope-media-files
   use 'nvim-lua/plenary.nvim' -- Common utilities
   use 'nvim-telescope/telescope.nvim'
   use 'nvim-telescope/telescope-file-browser.nvim'
+  use 'nvim-telescope/telescope-media-files.nvim'
 
   use 'akinsho/nvim-bufferline.lua'
   use 'norcalli/nvim-colorizer.lua'

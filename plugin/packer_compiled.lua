@@ -109,6 +109,11 @@ _G.packer_plugins = {
     path = "/Users/huanwei/.local/share/nvim/site/pack/packer/start/lualine.nvim",
     url = "https://github.com/hoob3rt/lualine.nvim"
   },
+  ["markdown-preview.nvim"] = {
+    loaded = true,
+    path = "/Users/huanwei/.local/share/nvim/site/pack/packer/start/markdown-preview.nvim",
+    url = "https://github.com/iamcco/markdown-preview.nvim"
+  },
   ["neosolarized.nvim"] = {
     loaded = true,
     path = "/Users/huanwei/.local/share/nvim/site/pack/packer/start/neosolarized.nvim",
@@ -174,6 +179,11 @@ _G.packer_plugins = {
     path = "/Users/huanwei/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
   },
+  ["popup.nvim"] = {
+    loaded = true,
+    path = "/Users/huanwei/.local/share/nvim/site/pack/packer/start/popup.nvim",
+    url = "https://github.com/nvim-lua/popup.nvim"
+  },
   ["prettier.nvim"] = {
     loaded = true,
     path = "/Users/huanwei/.local/share/nvim/site/pack/packer/start/prettier.nvim",
@@ -183,6 +193,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/huanwei/.local/share/nvim/site/pack/packer/start/telescope-file-browser.nvim",
     url = "https://github.com/nvim-telescope/telescope-file-browser.nvim"
+  },
+  ["telescope-media-files.nvim"] = {
+    loaded = true,
+    path = "/Users/huanwei/.local/share/nvim/site/pack/packer/start/telescope-media-files.nvim",
+    url = "https://github.com/nvim-telescope/telescope-media-files.nvim"
   },
   ["telescope.nvim"] = {
     loaded = true,
