@@ -63,3 +63,6 @@ nvim_lsp.ltex.setup {
   filetypes = { "bib", "gitcommit", "markdown", "org", "plaintex", "rst", "rnoweb", "tex" },
   single_file_support = true,
 }
+
+-- cmake lsp
+nvim_lsp.cmake.setup {}
