@@ -1,5 +1,10 @@
 # hwloser-vim
 
+## editor
+
+please note that, current hwloser-config support neovim only. 
+so im sorry about that we cant use other vim.vim
+
 ## details
 
 Hello everyone this my first vim config here, 
