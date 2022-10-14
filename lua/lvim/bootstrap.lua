@@ -85,21 +85,21 @@ function M:init(base_dir)
     return base_dir
   end
 
-  if os.getenv "LUNARVIM_RUNTIME_DIR" then
-    -- vim.opt.rtp:append(os.getenv "LUNARVIM_RUNTIME_DIR" .. path_sep .. "lvim")
-    vim.opt.rtp:remove(join_paths(vim.call("stdpath", "data"), "site"))
-    vim.opt.rtp:remove(join_paths(vim.call("stdpath", "data"), "site", "after"))
-    vim.opt.rtp:prepend(join_paths(self.runtime_dir, "site"))
-    vim.opt.rtp:append(join_paths(self.runtime_dir, "site", "after"))
+  -- if os.getenv "LUNARVIM_RUNTIME_DIR" then
+  --   -- vim.opt.rtp:append(os.getenv "LUNARVIM_RUNTIME_DIR" .. path_sep .. "lvim")
+  --   vim.opt.rtp:remove(join_paths(vim.call("stdpath", "data"), "site"))
+  --   vim.opt.rtp:remove(join_paths(vim.call("stdpath", "data"), "site", "after"))
+  --   vim.opt.rtp:prepend(join_paths(self.runtime_dir, "site"))
+  --   vim.opt.rtp:append(join_paths(self.runtime_dir, "site", "after"))
 
-    vim.opt.rtp:remove(vim.call("stdpath", "config"))
-    vim.opt.rtp:remove(join_paths(vim.call("stdpath", "config"), "after"))
-    vim.opt.rtp:prepend(self.config_dir)
-    vim.opt.rtp:append(join_paths(self.config_dir, "after"))
-    -- TODO: we need something like this: vim.opt.packpath = vim.opt.rtp
+  --   vim.opt.rtp:remove(vim.call("stdpath", "config"))
+  --   vim.opt.rtp:remove(join_paths(vim.call("stdpath", "config"), "after"))
+  --   vim.opt.rtp:prepend(self.config_dir)
+  --   vim.opt.rtp:append(join_paths(self.config_dir, "after"))
+  --   -- TODO: we need something like this: vim.opt.packpath = vim.opt.rtp
 
-    vim.cmd [[let &packpath = &runtimepath]]
-  end
+  --   vim.cmd [[let &packpath = &runtimepath]]
+  -- end
 
   -- FIXME: currently unreliable in unit-tests
   if not in_headless then

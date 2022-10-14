@@ -1,4 +1,5 @@
 local core_plugins = {
+  { "francoiscabrol/ranger.vim" },
   -- Packer can manage itself as an optional plugin
   { "wbthomason/packer.nvim" },
   { "neovim/nvim-lspconfig" },
