@@ -9,8 +9,9 @@ end
 
 local is_mac = machine "macunix"
 local is_win = machine "win32"
+local is_linux = machine "linux"
 
-if is_mac then
+if is_mac or is_linux then
   require('macos')
 elseif is_win then
   require('windows')
