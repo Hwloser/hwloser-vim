@@ -15,7 +15,7 @@
 
 模块化设计，这里抽象几种模块
 
-- [ ] bootstrap
+- [✅] bootstrap
 - [ ] config manager
     - [ ] config file manager
     - [ ] extension plugins config manager
