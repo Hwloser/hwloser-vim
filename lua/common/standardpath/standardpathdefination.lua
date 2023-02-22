@@ -19,6 +19,61 @@ the content of stdpath function:
 
   Example: >
     :echo stdpath("config")
+
+Some real example here:
+
+1. The table under defination
+{
+    "package":
+    {
+        "directory": "/Users/huanwei/.local/share/nvim/site/pack",
+    },
+    "log":
+    {
+        "directory": "/Users/huanwei/.local/state/nvim",
+    },
+    "config":
+    {
+        "directory": "/Users/huanwei/.config/nvim",
+    },
+    "site-after":
+    {
+        "directory": "/Users/huanwei/.local/share/nvim/site/after",
+    },
+    "data":
+    {
+        "directory": "/Users/huanwei/.local/share/nvim",
+    },
+    "cache":
+    {
+        "directory": "/Users/huanwei/.cache/nvim",
+    }
+}
+
+2. The real defination here
+[
+"/Users/huanwei/.config/nvim", 
+"/Users/huanwei/.config/nvim/after"
+"/Users/huanwei/.local/share/nvim/site",
+"/Users/huanwei/.local/share/nvim/site/after",
+
+"/etc/xdg/nvim",
+"/etc/xdg/nvim/after",
+
+"/usr/local/share/nvim/site",
+"/usr/local/share/nvim/site/after",
+
+"/usr/share/nvim/site",
+"/usr/share/nvim/site/after",
+
+"/opt/homebrew/etc/xdg/nvim",
+"/opt/homebrew/etc/xdg/nvim/after",
+"/opt/homebrew/Cellar/neovim/HEAD-f905ab0/lib/nvim",
+"/opt/homebrew/Cellar/neovim/HEAD-f905ab0/share/nvim/runtime",
+"/opt/homebrew/share/nvim/site",
+"/opt/homebrew/share/nvim/site/after",
+]
+
 --]]
 
 require "common.utilities"

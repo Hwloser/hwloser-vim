@@ -7,7 +7,6 @@
 local m = require("common.standardpath.standardpathdefination")
 
 
-print(require("dkjson").encode(m))
-
-print(require("dkjson").encode(vim.call("stdpath", "config_dirs")))
-print(require("dkjson").encode(vim.call("stdpath", "data_dirs")))
+-- print(require("dkjson").encode(m))
+-- print(require("dkjson").encode(vim.call("stdpath", "config_dirs")))
+-- print(require("dkjson").encode(vim.call("stdpath", "data_dirs")))
