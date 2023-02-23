@@ -33,4 +33,9 @@ return {
   ["site-after"] = {
     directory = Join(externalParDir, "local", "share", "nvim", "site", "after")
   },
+
+  ["lazy-nvim-plugin"] = {
+    describe = "nvim plugin manager,which is lazy.nvim",
+    directory = Join(parrentDir, "external", "lazy.nvim")
+  }
 }

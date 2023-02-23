@@ -138,7 +138,6 @@ local extension = {
     describe = "plugin load path, lifestyle in after",
     directory = Join(M["data"].directory, "site", "after"),
   },
-
 }
 
 return SimpleMergeInLeft(M, extension)
