@@ -38,15 +38,16 @@ vim.fn.stdpath = function(what)
 end
 
 -- 3. Remove the data and config defination from &rtp
--- vim.opt.rtp:prepend(vim.fn.stdpath("config"))
-vim.opt.rtp:prepend(resetPaths["base-lua"].directory)
+-- take care of these directory, because default neovim load plugins here
 vim.opt.rtp:remove(originPaths["config"].directory)
-vim.opt.rtp:remove(Join(originPaths["config"].directory, "after"))
-vim.opt.rtp:remove(Join(originPaths["data"].directory, "site"))
-vim.opt.rtp:remove(Join(originPaths["data"].directory, "site", "after"))
+vim.opt.rtp:prepend(resetPaths["base-lua"].directory)
+
+vim.opt.rtp:remove(JoinSep(originPaths["config"].directory, "after"))
+vim.opt.rtp:remove(JoinSep(originPaths["data"].directory, "site"))
+vim.opt.rtp:remove(JoinSep(originPaths["data"].directory, "site", "after"))
 
 vim.opt.packpath:remove(originPaths["config"].directory)
-vim.opt.packpath:remove(Join(originPaths["config"].directory, "after"))
-vim.opt.packpath:remove(Join(originPaths["data"].directory, "site"))
-vim.opt.packpath:remove(Join(originPaths["data"].directory, "site", "after"))
+vim.opt.packpath:remove(JoinSep(originPaths["config"].directory, "after"))
+vim.opt.packpath:remove(JoinSep(originPaths["data"].directory, "site"))
+vim.opt.packpath:remove(JoinSep(originPaths["data"].directory, "site", "after"))
 

@@ -7,7 +7,7 @@ require "common.utilities"
 -- 1. Get the parent directory in git module
 local parrentDir = GetGitRootDirectory()
 
-local externalParDir = Join(parrentDir, "external")
+local externalParDir = JoinSep(parrentDir, "external")
 
 return {
   ["base-lua"] = {
@@ -16,26 +16,26 @@ return {
   },
 
   ["cache"] = {
-    directory = Join(externalParDir, "cache", "nvim")
+    directory = JoinSep(externalParDir, "cache", "nvim")
   },
   ["data"] = {
-    directory = Join(externalParDir, "local", "share", "nvim")
+    directory = JoinSep(externalParDir, "local", "share", "nvim")
   },
   ["config"] = {
-    directory = Join(externalParDir, "config", "nvim")
+    directory = JoinSep(externalParDir, "config", "nvim")
   },
   ["log"] = {
-    directory = Join(externalParDir, "state", "nvim")
+    directory = JoinSep(externalParDir, "state", "nvim")
   },
   ["package"] = {
-    directory = Join(externalParDir, "local", "share", "nvim", "site", "pack")
+    directory = JoinSep(externalParDir, "local", "share", "nvim", "site", "pack")
   },
   ["site-after"] = {
-    directory = Join(externalParDir, "local", "share", "nvim", "site", "after")
+    directory = JoinSep(externalParDir, "local", "share", "nvim", "site", "after")
   },
 
   ["lazy-nvim-plugin"] = {
     describe = "nvim plugin manager,which is lazy.nvim",
-    directory = Join(parrentDir, "external", "lazy.nvim")
+    directory = JoinSep(parrentDir, "external", "lazy.nvim")
   }
 }

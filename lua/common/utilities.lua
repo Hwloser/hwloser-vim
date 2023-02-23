@@ -46,7 +46,7 @@ function TryToInstallLuarocks()
 end
 
 -- Load the mapConfigs to vim.keymap
--- @tparam mapConfigs the keymap config
+---@tparam mapConfigs the keymap config
 function LoadMapConfigs(mapConfigs)
   for _, mapdef in pairs(mapConfigs) do
     local maps = mapdef.maps
@@ -68,19 +68,35 @@ function LoadMapConfigs(mapConfigs)
   end
 end
 
+-- backup:
+-- function GetGitRootDirectory()
+--   local handle = io.popen('git rev-parse --show-toplevel')
+--   local result = handle:read("*a")
+--   handle:close()
+--   result = result:gsub('\n', '') -- remove the newline at the end of the string
+--   return result
+-- end
 function GetGitRootDirectory()
-  local handle = io.popen('git rev-parse --show-toplevel')
-  local result = handle:read("*a")
-  handle:close()
-  result = result:gsub('\n', '') -- remove the newline at the end of the string
-  return result
+  local current_dir = debug.getinfo(1, "S").source:sub(2)
+  while current_dir ~= '' do
+    local stat = vim.loop.fs_stat(current_dir .. '/.git')
+    if stat and stat.type == 'directory' then
+      return current_dir
+    end
+    current_dir = vim.fn.fnamemodify(current_dir, ':h')
+  end
+  return nil
 end
 
 -- The path seperate for each OS_ARCH
 local pse = vim.loop.os_uname().version:match "Windows" and "\\" or "/"
 
-function Join(...)
+function JoinSep(...)
   return table.concat({ ... }, pse)
+end
+
+function JoinDot(...)
+  return table.concat({ ... }, '.')
 end
 
 function Split(str, delimiter)
@@ -102,7 +118,32 @@ function SimpleMergeInLeft(left, right)
   return left
 end
 
--- Try get project directory
-function ProjectParentDirectory()
+---@param ... table
+---@return table
+function MergeTable(...)
+  local t = {}
+  for _, v in ipairs { ... } do
+    table.insert(t, v)
+  end
+  return t
+end
 
+---List file under the directory
+-- Note that, file name will be remove the ending '.lua' flag
+---@param directory?string
+---@param pattern?string
+function ListFiles(directory, pattern)
+  local files = {}
+  local handle = vim.loop.fs_scandir(directory)
+  if not handle then
+    return files
+  end
+  repeat
+    local name, t = vim.loop.fs_scandir_next(handle)
+    if name and t == "file" and name:match(pattern) then
+      local truncName = name:gsub("%.lua$", "")
+      table.insert(files, truncName)
+    end
+  until not name
+  return files
 end

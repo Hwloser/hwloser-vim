@@ -131,12 +131,12 @@ local M = {
 local extension = {
   ["package"] = {
     describe = "the extension of packages dir, under the stdpath(\"data\")/site/pack",
-    directory = Join(M["data"].directory, "site", "pack"),
+    directory = JoinSep(M["data"].directory, "site", "pack"),
   },
 
   ["site-after"] = {
     describe = "plugin load path, lifestyle in after",
-    directory = Join(M["data"].directory, "site", "after"),
+    directory = JoinSep(M["data"].directory, "site", "after"),
   },
 }
 

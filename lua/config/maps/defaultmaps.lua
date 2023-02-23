@@ -24,7 +24,7 @@ return {
     maps = {
       -- Windows navigation
       ["<C-h>"] = "<C-w>h",
-      ["<C-l>"] = "<C-w>l"
+      ["<C-l>"] = "<C-w>l",
     }
   },
 

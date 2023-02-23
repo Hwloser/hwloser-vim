@@ -2,11 +2,9 @@
 -- Backend manager
 --]]
 
-require "common.utilities"
-
 ---@param sub string
 local function join(sub)
-  return "plugin.backend." .. sub
+  return "plugin.frontend." .. sub
 end
 
 ---@param keys string[]
