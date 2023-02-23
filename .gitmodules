@@ -1,3 +1,4 @@
 [submodule "external/lazy.nvim"]
 	path = external/lazy.nvim
 	url = https://github.com/folke/lazy.nvim.git
+	branch = stable
