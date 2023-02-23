@@ -11,7 +11,10 @@ require "config.maps"
 -- 3. Autocommand manager
 require "config.commands"
 
--- 4. Snippest manager
+-- 4. global variables manager
+require "config.variables"
+
+-- 5. Snippest manager
 require "config.snippest"
 
 return M
