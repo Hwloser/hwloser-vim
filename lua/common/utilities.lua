@@ -68,10 +68,12 @@ function LoadMapConfigs(mapConfigs)
   end
 end
 
-function getCurrentDirectory()
-  local info = debug.getinfo(1, "S")
-  local path = info.source:match("@(.*/)")
-  return path
+function GetGitRootDirectory()
+  local handle = io.popen('git rev-parse --show-toplevel')
+  local result = handle:read("*a")
+  handle:close()
+  result = result:gsub('\n', '') -- remove the newline at the end of the string
+  return result
 end
 
 -- The path seperate for each OS_ARCH
@@ -79,6 +81,14 @@ local pse = vim.loop.os_uname().version:match "Windows" and "\\" or "/"
 
 function Join(...)
   return table.concat({ ... }, pse)
+end
+
+function Split(str, delimiter)
+  local result = {}
+  for match in (str .. delimiter):gmatch("(.-)" .. delimiter) do
+    table.insert(result, match)
+  end
+  return result
 end
 
 -- Simple merge the right table into left:
@@ -90,4 +100,9 @@ function SimpleMergeInLeft(left, right)
     left[k] = v
   end
   return left
+end
+
+-- Try get project directory
+function ProjectParentDirectory()
+
 end

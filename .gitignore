@@ -1,3 +1,2 @@
-# Independently plugin direcory
-
-# log module for debug and analyze
+# external directory for install plugin, log e.g.
+external/

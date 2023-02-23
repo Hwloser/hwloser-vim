@@ -50,30 +50,52 @@ Some real example here:
     }
 }
 
-2. The real defination here
+2. The real defination here, in &rtp
 [
-"/Users/huanwei/.config/nvim", 
-"/Users/huanwei/.config/nvim/after"
-"/Users/huanwei/.local/share/nvim/site",
-"/Users/huanwei/.local/share/nvim/site/after",
+  "/Users/huanwei/.config/nvim", 
+  "/Users/huanwei/.config/nvim/after"
+  "/Users/huanwei/.local/share/nvim/site",
+  "/Users/huanwei/.local/share/nvim/site/after",
 
-"/etc/xdg/nvim",
-"/etc/xdg/nvim/after",
+  "/etc/xdg/nvim",
+  "/etc/xdg/nvim/after",
 
-"/usr/local/share/nvim/site",
-"/usr/local/share/nvim/site/after",
+  "/usr/local/share/nvim/site",
+  "/usr/local/share/nvim/site/after",
 
-"/usr/share/nvim/site",
-"/usr/share/nvim/site/after",
+  "/usr/share/nvim/site",
+  "/usr/share/nvim/site/after",
 
-"/opt/homebrew/etc/xdg/nvim",
-"/opt/homebrew/etc/xdg/nvim/after",
-"/opt/homebrew/Cellar/neovim/HEAD-f905ab0/lib/nvim",
-"/opt/homebrew/Cellar/neovim/HEAD-f905ab0/share/nvim/runtime",
-"/opt/homebrew/share/nvim/site",
-"/opt/homebrew/share/nvim/site/after",
+  "/opt/homebrew/etc/xdg/nvim",
+  "/opt/homebrew/etc/xdg/nvim/after",
+  "/opt/homebrew/Cellar/neovim/HEAD-f905ab0/lib/nvim",
+  "/opt/homebrew/Cellar/neovim/HEAD-f905ab0/share/nvim/runtime",
+  "/opt/homebrew/share/nvim/site",
+  "/opt/homebrew/share/nvim/site/after",
 ]
 
+3. The real defination here in packpath
+[
+  "/Users/huanwei/.config/nvim",
+  "/Users/huanwei/.config/nvim/after"
+  "/Users/huanwei/.local/share/nvim/site",
+  "/Users/huanwei/.local/share/nvim/site/after",
+
+  "/opt/homebrew/etc/xdg/nvim",
+  "/opt/homebrew/etc/xdg/nvim/after",
+  "/opt/homebrew/share/nvim/site",
+  "/opt/homebrew/share/nvim/site/after",
+  "/opt/homebrew/Cellar/neovim/HEAD-f905ab0/lib/nvim",
+  "/opt/homebrew/Cellar/neovim/HEAD-f905ab0/share/nvim/runtime",
+
+  "/usr/share/nvim/site",
+  "/usr/share/nvim/site/after",
+  "/usr/local/share/nvim/site",
+  "/usr/local/share/nvim/site/after",
+
+  "/etc/xdg/nvim",
+  "/etc/xdg/nvim/after",
+]
 --]]
 
 require "common.utilities"
