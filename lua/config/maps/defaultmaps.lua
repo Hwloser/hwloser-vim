@@ -27,6 +27,7 @@ return {
       ["<C-l>"] = "<C-w>l",
       ["<C-k>"] = "<C-w>k",
       ["<C-j>"] = "<C-w>j",
+      ["K"] = vim.lsp.buf.hover()
     }
   },
 

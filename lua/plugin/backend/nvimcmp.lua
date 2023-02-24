@@ -35,49 +35,14 @@ return {
         { name = "path" },
       }),
       formatting = {
-        format = function(_, item)
-          local icons = {
-            Array = " ",
-            Boolean = " ",
-            Class = " ",
-            Color = " ",
-            Constant = " ",
-            Constructor = " ",
-            Copilot = " ",
-            Enum = " ",
-            EnumMember = " ",
-            Event = " ",
-            Field = " ",
-            File = " ",
-            Folder = " ",
-            Function = " ",
-            Interface = " ",
-            Key = " ",
-            Keyword = " ",
-            Method = " ",
-            Module = " ",
-            Namespace = " ",
-            Null = "ﳠ ",
-            Number = " ",
-            Object = " ",
-            Operator = " ",
-            Package = " ",
-            Property = " ",
-            Reference = " ",
-            Snippet = " ",
-            String = " ",
-            Struct = " ",
-            Text = " ",
-            TypeParameter = " ",
-            Unit = " ",
-            Value = " ",
-            Variable = " ",
-          }
-          if icons[item.kind] then
-            item.kind = icons[item.kind] .. item.kind
+        format = require("lspkind").cmp_format({
+          with_text = true,
+          maxwidth = 50,
+          before = function(entry, item)
+            item.menu = "[" .. string.upper(entry.source.name) .. "]"
+            return item
           end
-          return item
-        end,
+        })
       },
       experimental = {
         ghost_text = {

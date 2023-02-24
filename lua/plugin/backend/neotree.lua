@@ -5,7 +5,10 @@ return {
   lazy = true,
   -- branch = "v2.x",
   keys = {
-    { "<leader>e", "<cmd>Neotree toggle<cr>", desc = "NeoTree" },
+    { "<leader>n", desc = "NeoTree" },
+    { "<leader>no", "<cmd>Neotree toggle<cr>", desc = "NeoTree Toggle" },
+    { "<leader>nr", "<cmd>Neotree reveal<cr>", desc = "NeoTree Reveal" },
+    { "<leader>ng", "<cmd>Neotree git_status float<cr>", desc = "NeoTree Git Float" },
   },
   dependencies = {
     "nvim-lua/plenary.nvim",
@@ -103,8 +106,8 @@ return {
         git_status = {
           symbols = {
             -- Change type
-            added     = "", -- or "✚", but this is redundant info if you use git_status_colors on the name
-            modified  = "", -- or "", but this is redundant info if you use git_status_colors on the name
+            added     = "✚", -- or "✚", but this is redundant info if you use git_status_colors on the name
+            modified  = "", -- or "", but this is redundant info if you use git_status_colors on the name
             deleted   = "✖", -- this can only be used in the git_status source
             renamed   = "", -- this can only be used in the git_status source
             -- Status type
@@ -212,7 +215,7 @@ return {
         -- "open_current",  -- netrw disabled, opening a directory opens within the
         -- window like netrw would, regardless of window.position
         -- "disabled",    -- netrw left alone, neo-tree does not handle opening dirs
-        use_libuv_file_watcher = false, -- This will use the OS level file watchers to detect changes
+        use_libuv_file_watcher = true, -- This will use the OS level file watchers to detect changes
         -- instead of relying on nvim autocmd events.
         window = {
           mappings = {
