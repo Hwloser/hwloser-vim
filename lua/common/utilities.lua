@@ -147,3 +147,22 @@ function ListFiles(directory, pattern)
   until not name
   return files
 end
+
+-- this will return a function that calls telescope.
+-- for `files`, git_files or find_files will be chosen depending on .git
+function Telescope(builtin, opts)
+  local params = { builtin = builtin, opts = opts }
+  return function()
+    builtin = params.opts
+    opts = params.opts
+    opts = vim.tbl_deep_extend("force", { cwd = GetGitRootDirectory() }, opts or {})
+    if builtin == "files" then
+      if vim.loop.fs_stat((opts.cwd or vim.loop.cwd()) .. "/.git") then
+        opts.show_untracked = true
+        builtin = "git_files"
+      else
+        builtin = "find_files"
+      end
+    end
+  end
+end
