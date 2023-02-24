@@ -1,6 +1,10 @@
 install:
-	@echo "backup your older nvim config"
-	mv ~/.config/nvim ~/.config/nvim_bak
+	@echo "avoid ~/.config is not exists. try mkdir firstly"
+	mkdir -p ~/.config
+	@echo "check if nvim should be backup"
+	if [ -d ~/.config/nvim ]; then \
+    mv ~/.config/nvim ~/.config/nvim_backup; \
+  fi
 	@echo "soft link this repository"
 	ln -s $(realpath ./) ~/.config/nvim
 
@@ -9,4 +13,4 @@ uninstall:
 	# Note that, only remove soft link
 	rm ~/.config/nvim
 
-.PHONY = uninstall
+.PHONY = uninstall test install
