@@ -6,8 +6,8 @@ return {
   -- branch = "v2.x",
   keys = {
     { "<leader>n", desc = "NeoTree" },
-    { "<leader>no", "<cmd>Neotree toggle<cr>", desc = "NeoTree Toggle" },
-    { "<leader>nr", "<cmd>Neotree reveal<cr>", desc = "NeoTree Reveal" },
+    { "<leader>no", "<cmd>Neotree toggle float<cr>", desc = "NeoTree Toggle" },
+    { "<leader>nr", "<cmd>Neotree reveal float<cr>", desc = "NeoTree Reveal" },
     { "<leader>ng", "<cmd>Neotree git_status float<cr>", desc = "NeoTree Git Float" },
   },
   dependencies = {
