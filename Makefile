@@ -1,4 +1,6 @@
 install:
+	@echo "git submodule update for lazy.nvim"
+	git submodule update --init
 	@echo "avoid ~/.config is not exists. try mkdir firstly"
 	mkdir -p ~/.config
 	@echo "check if nvim should be backup"
