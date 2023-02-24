@@ -6,7 +6,8 @@
     + [Requirements](#requirements)
       - [neovim](#neovim)
       - [git](#git)
-    + [How to install](#how-to-install)
+      - [make](#make)
+    + [How to install hwloser-vim](#how-to-install-hwloser-vim)
 
 <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
 
