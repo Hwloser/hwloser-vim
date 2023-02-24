@@ -1,9 +1,0 @@
-config_*/
-features/
-plugins/
-bin/
-
-# why i ignore workspace
-# please see: https://github.com/mfussenegger/nvim-jdtls
-# data directory configuration
-workspace/
