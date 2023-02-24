@@ -23,4 +23,21 @@ return {
   smartcase = true, -- smart case
   splitbelow = true, -- force all horizontal splits to go below window
   splitright = true, -- force all vertical splits to go right window
+  title = true, -- set the title of window to the value of the window will be set to
+
+  expandtab = true, -- convert tabs to spaces
+  shiftwidth = 2, -- the number of spaces inserted for each indentation
+  tabstop = 2, -- insert 2 spaces for a tab
+
+  number = true, -- set numbered lines
+  numberwidth = 2, -- set number column width to 2 {default 4}
+
+  signcolumn = "yes", -- Keep space for sign test, always show the sign column, otherwise it would shift the text each time
+
+  -- scrolloff = 8, -- minimal number of screen lines to keep above and below the cursor.
+  -- sidescrolloff = 8, -- minimal number of screen lines to keep left and right of the cursor.
+
+  -- showcmd = false,
+  -- ruler = false,
+  -- laststatus = 3,
 }

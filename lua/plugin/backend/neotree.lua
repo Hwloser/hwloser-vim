@@ -129,8 +129,8 @@ return {
           --   nowait = false, -- disable `nowait` if you have existing combos starting with this char that you want to use
           -- },
           ["o"] = {
-            "toggle_node",
-            nowait = false, -- disable `nowait` if you have existing combos starting with this char that you want to use
+            "open",
+            nowait = true, -- disable `nowait` if you have existing combos starting with this char that you want to use
           },
           ["<2-LeftMouse>"] = "open",
           ["<cr>"] = "open",

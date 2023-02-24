@@ -17,12 +17,12 @@
 
 - [✅] bootstrap
 - [✅] config manager
-    - [ ] config file manager
-    - [ ] extension plugins config manager
-    - [ ] event hook config manager
-    - [ ] command config manager
+    - [✅] config file manager
+    - [✅] extension plugins config manager
+    - [✅] event hook config manager
+    - [✅] command config manager
     - [✅] map config manager
-- [ ] backend
+- [✅] backend
     - [ ] telescope manager
     - [ ] lsp manager
     - [ ] dap manager

@@ -14,6 +14,6 @@ require "standardpath"
 require "config"
 
 -- 3. Install plugin manager for load plugins
-local pluginManager = require "plugin"
+require "plugin"
 
 return M

@@ -25,6 +25,8 @@ return {
       -- Windows navigation
       ["<C-h>"] = "<C-w>h",
       ["<C-l>"] = "<C-w>l",
+      ["<C-k>"] = "<C-w>k",
+      ["<C-j>"] = "<C-w>j",
     }
   },
 
