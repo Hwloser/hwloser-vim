@@ -1,5 +1,8 @@
 return {
   "neovim/nvim-lspconfig",
+  keys = {
+    -- { "<leader>lr", mode = { "n", "x", "o" }, desc = "Rename" },
+  },
   event = {
     "BufReadPre", "BufNewFile"
   },

@@ -75,4 +75,9 @@ return {
       },
     },
   },
+  config = function (_, opts)
+    local t = require("telescope")
+    t.setup(opts)
+    t.extensions.notify.notify(opts)
+  end
 }
