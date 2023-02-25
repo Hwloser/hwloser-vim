@@ -71,7 +71,10 @@ return {
     },
   },
   config = function(_, opts)
-    require("chatgpt").setup(opts)
+    local isEnable = os.getenv("OPENAI_API_KEY")
+    if isEnable and string.len(isEnable) > 0 then
+      require("chatgpt").setup(opts)
+    end
   end,
   dependencies = {
     "MunifTanjim/nui.nvim",
