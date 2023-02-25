@@ -5,8 +5,8 @@ install:
 	mkdir -p ~/.config
 	@echo "check if nvim should be backup"
 	if [ -d ~/.config/nvim ]; then \
-    mv ~/.config/nvim ~/.config/nvim_backup; \
-  fi
+		mv ~/.config/nvim ~/.config/nvim_backup; \
+	fi
 	@echo "soft link this repository"
 	ln -s $(realpath ./) ~/.config/nvim
 

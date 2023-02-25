@@ -1,3 +1,5 @@
 # external directory for install plugin, log e.g.
 external
 
+.idea
+*.iml
