@@ -166,3 +166,9 @@ function Telescope(builtin, opts)
     end
   end
 end
+
+-- Check the plugin is exists in lazy.core.config?
+---@param plugin? string
+function isPluginExists(plugin)
+  return require("lazy.core.config").plugins[plugin] ~= nil
+end

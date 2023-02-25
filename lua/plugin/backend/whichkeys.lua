@@ -16,6 +16,9 @@ return {
       ["<leader>f"] = {
         name = "+file/find",
       },
+      ["<leader>u"] = {
+        name = "ui",
+      },
     }
     wk.register(keymaps)
   end
