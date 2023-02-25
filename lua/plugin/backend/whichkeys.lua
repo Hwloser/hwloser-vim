@@ -10,6 +10,12 @@ return {
     wk.setup(opts)
     local keymaps = {
       mode = { "n", "v" },
+      ["g"] = {
+        name = "+goto",
+      },
+      ["<leader>f"] = {
+        name = "+file/find",
+      },
     }
     wk.register(keymaps)
   end

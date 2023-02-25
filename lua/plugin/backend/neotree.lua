@@ -1,15 +1,37 @@
 -- Please check: https://github.com/nvim-neo-tree/neo-tree.nvim
 
+require("common.utilities")
+
 return {
   "nvim-neo-tree/neo-tree.nvim",
   lazy = true,
-  -- branch = "v2.x",
   keys = {
-    { "<leader>n", desc = "NeoTree" },
-    { "<leader>no", "<cmd>Neotree toggle float<cr>", desc = "NeoTree Toggle" },
-    { "<leader>nr", "<cmd>Neotree reveal float<cr>", desc = "NeoTree Reveal" },
-    { "<leader>ng", "<cmd>Neotree git_status float<cr>", desc = "NeoTree Git Float" },
+    {
+      "<leader>fE",
+      function()
+        require("neo-tree.command").execute({
+          toggle = true,
+          position = "float",
+          dir = vim.loop.cwd(),
+        })
+      end,
+      desc = "Explorer NeoTree (current working directory)",
+    },
+    {
+      "<leader>fe",
+      function()
+        require("neo-tree.command").execute({
+          toggle = true,
+          reveal = true,
+          position = "float",
+        })
+      end,
+      desc = "Explorer NeoTree (reveal)",
+    },
   },
+  deactivate = function ()
+    vim.cmd("Neotree close")
+  end,
   dependencies = {
     "nvim-lua/plenary.nvim",
     "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
@@ -127,10 +149,6 @@ return {
           nowait = true,
         },
         mappings = {
-          -- ["<space>"] = {
-          --   "toggle_node",
-          --   nowait = false, -- disable `nowait` if you have existing combos starting with this char that you want to use
-          -- },
           ["o"] = {
             "open",
             nowait = true, -- disable `nowait` if you have existing combos starting with this char that you want to use
