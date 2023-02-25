@@ -24,7 +24,7 @@ return {
         --  - false: Servers are not automatically installed.
         --  - true : All servers set up via lspconfig are automatically installed.
         --  Example: automatic_installation = { exclude = { "rust_analyzer", "solargraph" } }
-        automatic_installation = false,
+        automatic_installation = true,
       },
       cond = function()
         return require("lazy.core.config").plugins["nvim-cmp"] ~= nil

@@ -1,5 +1,6 @@
 return {
   "jackMort/ChatGPT.nvim",
+  enabled = false,
   -- lazy = true,
   opts = {
     -- welcome_message = WELCOME_MESSAGE, -- set to "" if you don't like the fancy godot robot
