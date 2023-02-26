@@ -212,3 +212,10 @@ function GetBufferSize()
   end
   return { width = bufinfo.width, height = bufinfo.height }
 end
+
+--- Detect is target file exists
+---@param file string
+function IsFileExists(file)
+  local stat = vim.loop.fs_stat(file)
+  return stat and stat.type == "file"
+end

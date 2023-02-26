@@ -1,3 +1,5 @@
+require("common.utilities")
+
 return {
   "iamcco/markdown-preview.nvim",
   lazy = false,
@@ -5,9 +7,14 @@ return {
   build = function()
     vim.fn["mkdp#util#install"]()
   end,
-  config = function()
+  opts = {
+    broswer = '/Applications/Min.app/Contents/MacOS/Min'
+  },
+  config = function(_, opts)
     vim.g.mkdp_auto_start = 0
-    vim.g.mkdp_browser = '/Applications/Min.app/Contents/MacOS/Min'
+    if IsFileExists(opts.broswer) then
+      vim.g.mkdp_browser = opts.broswer
+    end
     vim.g.mkdp_page_title = '「${name}$」'
     vim.g.mkdp_theme = 'dark'
   end,
