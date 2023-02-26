@@ -19,7 +19,7 @@ return {
   ignorecase = true, -- ignore case in search patterns
   mouse = "a", -- enable mouse used
   swapfile = false, -- create a swap file
-  wrap = true, -- display lines as one long line
+  wrap = false, -- display lines as one long line
   cursorline = true, -- highlight the current line
   smartcase = true, -- smart case
   splitbelow = true, -- force all horizontal splits to go below window
