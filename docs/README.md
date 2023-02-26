@@ -78,3 +78,5 @@ make uninstall
 ```
 
 ## Some details of configuration
+
+> to be continue
