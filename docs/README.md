@@ -8,6 +8,7 @@
       * [neovim](#neovim)
       * [git](#git)
       * [make](#make)
+    * [How to use](#how-to-use)
     * [How to install hwloser\-vim](#how-to-install-hwloser-vim)
   * [Some details of configuration](#some-details-of-configuration)
 
@@ -19,6 +20,7 @@ If you want try learn how this project build? Try the under steps:
 
 - Project description
 - How to install
+- How to usage
 - Some details of configuration
 
 ---
@@ -76,6 +78,22 @@ make install
 # uninstall this manager
 make uninstall
 ```
+
+### How to use
+
+1. Dashboard
+2. Lazy
+3. which-key
+4. terminal
+5. lazygit
+6. Mason
+7. telescope
+8. notify
+9. markdown
+
+#### dashboard
+
+
 
 ## Some details of configuration
 
