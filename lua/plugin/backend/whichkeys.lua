@@ -8,6 +8,7 @@ return {
   config = function(_, opts)
     local wk = require("which-key")
     wk.setup(opts)
+
     local keymaps = {
       mode = { "n", "v" },
       ["g"] = {
@@ -27,8 +28,12 @@ return {
       },
       ["<leader>m"] = {
         name = "makrdown"
-      }
+      },
+      ["<leader>t"] = {
+        name = "terminal"
+      },
     }
+
     wk.register(keymaps)
   end
 }

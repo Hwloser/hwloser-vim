@@ -184,3 +184,31 @@ function LspAttach(on_attach)
     end
   })
 end
+
+--- Get the dunamic terminal size
+---@param direction number
+---@param size number default is 20
+function GetDynamicTerminalSize(direction, size)
+  size = size or 20
+  if direction ~= "float" and tostring(size):find(".", 1, true) then
+    size = math.min(size, 1.0)
+    local buf_sizes = GetBufferSize()
+    local buf_size = direction == "horizontal" and buf_sizes.height or buf_sizes.width
+    return buf_size * size
+  else
+    return size
+  end
+end
+
+--- Get current buffer size
+---@return {width: number, height: number}
+function GetBufferSize()
+  local cbuf = vim.api.nvim_get_current_buf()
+  local bufinfo = vim.tbl_filter(function(buf)
+    return buf.bufnr == cbuf
+  end, vim.fn.getwininfo(vim.api.nvim_get_current_win()))[1]
+  if bufinfo == nil then
+    return { width = -1, height = -1 }
+  end
+  return { width = bufinfo.width, height = bufinfo.height }
+end
