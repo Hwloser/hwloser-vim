@@ -32,6 +32,9 @@ return {
       ["<leader>t"] = {
         name = "terminal"
       },
+      ["<leader>g"] = {
+        name = "git"
+      },
     }
 
     wk.register(keymaps)
