@@ -71,7 +71,7 @@ apt-get update && apt-get install make
 
 ```bash
 # install this manager
-make
+make install
 
 # uninstall this manager
 make uninstall
