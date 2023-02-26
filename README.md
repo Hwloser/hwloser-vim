@@ -1,8 +1,8 @@
 # hwloser-vim
 
-## Git pages
+Please check more infomation in git pages.
 
-> [link here](https://hwloser.github.io/hwloser-vim/)
+> [git pages links](https://hwloser.github.io/hwloser-vim/)
 
 - [hwloser-vim](#hwloser-vim)
   * [Our expectation](#our-expectation)
