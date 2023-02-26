@@ -22,6 +22,9 @@ return {
       ["<leader>l"] = {
         name = "lsp",
       },
+      ["<leader>b"] = {
+        name = "buffer"
+      }
     }
     wk.register(keymaps)
   end
