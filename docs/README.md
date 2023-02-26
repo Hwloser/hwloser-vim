@@ -81,19 +81,22 @@ make uninstall
 
 ### How to use
 
-1. Dashboard
-2. Lazy
-3. which-key
-4. terminal
-5. lazygit
-6. Mason
-7. telescope
-8. notify
-9. markdown
+1. iterm2 setting<for transport>
+2. NERDfont
+3. Dashboard
+4. Lazy
+5. which-key
+6. terminal
+7. lazygit
+8. Mason
+9. telescope
+10. notify
+11. markdown
 
 #### dashboard
+#### iterm2 transport settings
 
-
+---
 
 ## Some details of configuration
 
