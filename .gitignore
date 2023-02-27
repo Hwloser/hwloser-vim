@@ -3,3 +3,5 @@ external
 
 .idea
 *.iml
+
+.DS_store
