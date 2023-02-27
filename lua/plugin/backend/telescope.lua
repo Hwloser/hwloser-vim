@@ -36,6 +36,36 @@ return {
       "Goto Type Definition",
     },
     {
+      "<leader>ll",
+      function()
+        local floatConfig = {
+          focusable = true,
+          style = "minimal",
+          border = "rounded",
+          source = "always",
+          header = "",
+          prefix = "",
+          scope = "line",
+          format = function(d)
+            local code = d.code or (d.user_data and d.user_data.lsp.code)
+            if code then
+              return string.format("%s [%s]", d.message, code):gsub("1. ", "")
+            end
+            return d.message
+          end,
+        }
+        vim.diagnostic.open_float(0, floatConfig)
+      end,
+      desc = "Show line diagnostics"
+    },
+    {
+      "<leader>lf",
+      function()
+        vim.lsp.buf.format({})
+      end,
+      desc = "Format",
+    },
+    {
       "K",
       vim.lsp.buf.hover,
       desc = "Hover",
@@ -78,7 +108,7 @@ return {
       },
     },
   },
-  config = function (_, opts)
+  config = function(_, opts)
     local t = require("telescope")
     t.setup(opts)
     -- TODO: There will trigger some problems, check it soon
