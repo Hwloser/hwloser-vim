@@ -17,6 +17,21 @@ return {
       "<Cmd>BufferLineGroupClose ungrouped<CR>",
       desc = "Delete non-pinned buffers"
     },
+    {
+      "<leader>bg",
+      "<Cmd>BufferLinePick<CR>",
+      desc = "Pick a BufferLine"
+    },
+    {
+      "<leader>bn",
+      "<cmd>BufferLineCycleNext<cr>",
+      desc = "cycle go to next buffer",
+    },
+    {
+      "<leader>bb",
+      "<cmd>BufferLineCyclePrev<cr>",
+      desc = "cycle go to previous buffer",
+    },
   },
   opts = {
     options = {
@@ -25,7 +40,7 @@ return {
       diagnostics_indicator = function(_, _, diag)
         local icons = ci.diagnostics
         local ret = (diag.error and icons.Error .. diag.error .. " " or "")
-          .. (diag.warning and icons.Warn .. diag.warning or "")
+            .. (diag.warning and icons.Warn .. diag.warning or "")
         return vim.trim(ret)
       end,
       offsets = {
@@ -36,6 +51,15 @@ return {
           text_align = "left",
         },
       },
+      hover = {
+        enabled = true,
+        delay = 200,
+        reveal = { 'close' }
+      },
+      separator_style = "slant",
+      -- indicator = {
+      --   style = "underline",
+      -- },
     },
   },
 }
