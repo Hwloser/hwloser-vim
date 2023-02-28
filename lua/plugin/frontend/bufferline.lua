@@ -53,10 +53,10 @@ return {
       },
       hover = {
         enabled = true,
-        delay = 200,
+        delay = 10,
         reveal = { 'close' }
       },
-      separator_style = "slant",
+      -- separator_style = "padded_slant",
       -- indicator = {
       --   style = "underline",
       -- },
