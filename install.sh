@@ -1,6 +1,6 @@
 #!/bin/bash
 
-work_dir="~/.hwloser-vim"
+work_dir=$HOME/.hwloser-vim
 sudo apt-get update -y
 sudo apt-get install neovim git make -y
 
