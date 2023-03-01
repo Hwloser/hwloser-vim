@@ -27,9 +27,12 @@ A easy to use vim config manager.
 
 ## How to install
 ### 1. Install by one line
-```bash
-curl -s https://raw.githubusercontent.com/acmesh-official/acme.sh/master/install.sh | bash
-```
+- linux
+    ```bash
+    curl -s https://raw.githubusercontent.com/Hwloser/hwloser-vim/master/install.sh | bash
+    ```
+- mac 
+- [ ] todo
 ### 2. Install Manually
 
 ### Requirements
