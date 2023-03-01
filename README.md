@@ -25,7 +25,12 @@ A easy to use vim config manager.
 1. Don`t conflict with other nvim config, so you can easy to change the environment of neovim.
 2. Modularizer each plugin manager.
 
-## How to Use?
+## How to install
+### 1. Install by one line
+```bash
+curl -s https://raw.githubusercontent.com/acmesh-official/acme.sh/master/install.sh | bash
+```
+### 2. Install Manually
 
 ### Requirements
 
@@ -73,3 +78,5 @@ make
 # uninstall this manager
 make uninstall
 ```
+
+## How to Use?
