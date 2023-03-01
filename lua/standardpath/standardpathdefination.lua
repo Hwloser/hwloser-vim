@@ -101,7 +101,12 @@ Some real example here:
 require "common.utilities"
 
 local stdp = function(define)
-  return vim.call("stdpath", define)
+  local ok, path = pcall(vim.call, "stdpath", define)
+  if not ok then
+    return nil
+  else
+    return path
+  end
 end
 
 local M = {
