@@ -18,7 +18,6 @@ return {
   hlsearch = true, -- highlight all matches on previous search pattern
   ignorecase = true, -- ignore case in search patterns
   mouse = "a", -- enable mouse used
-  mousemoveevent = true,
   swapfile = false, -- create a swap file
   wrap = false, -- display lines as one long line
   cursorline = true, -- highlight the current line
