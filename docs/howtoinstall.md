@@ -57,7 +57,10 @@ apt-get update && apt-get install make
 ## How to install hwloser-vim
 
 ```bash
-# install this manager
+# 1. clone repository
+git clone https://github.com/Hwloser/hwloser-vim.git
+
+# 2. install this manager
 make install
 
 # uninstall this manager
