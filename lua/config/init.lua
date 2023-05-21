@@ -12,8 +12,9 @@ require "config.maps"
 require "config.commands"
 
 -- 4. global variables manager
--- require "config.variables"
 vim.g.mapleader = " "
+vim.g.maplocalleader = " "
+-- require "config.variables"
 
 -- 5. Snippest manager
 require "config.snippest"

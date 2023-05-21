@@ -1,3 +1,4 @@
 return {
-  mapleader = " "
+  mapleader = " ",
+  maplocalleader = " ",
 }

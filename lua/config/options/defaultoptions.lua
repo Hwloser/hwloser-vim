@@ -22,6 +22,7 @@ return {
   wrap = false, -- display lines as one long line
   cursorline = true, -- highlight the current line
   smartcase = true, -- smart case
+  smartindent = true, -- Inerts indents automatically
   splitbelow = true, -- force all horizontal splits to go below window
   splitright = true, -- force all vertical splits to go right window
   title = true, -- set the title of window to the value of the window will be set to
@@ -34,6 +35,10 @@ return {
   numberwidth = 2, -- set number column width to 2 {default 4}
 
   signcolumn = "yes", -- Keep space for sign test, always show the sign column, otherwise it would shift the text each time
+
+  spelllang = {
+    "en"
+  },
 
   -- scrolloff = 8, -- minimal number of screen lines to keep above and below the cursor.
   -- sidescrolloff = 8, -- minimal number of screen lines to keep left and right of the cursor.
